@@ -1,0 +1,485 @@
+/* ========== GOOGLE FONTS =========== */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+
+/* Start vairable */
+:root {
+  --main-color: #1c1c1c;
+  --secondary-color: #fff;
+  --section-padding: 60px 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* End variable */
+/* Start Globle Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #fbfbfb;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Globle Rules */
+
+/* Start Components */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+/* End Components */
+
+/* Start Heading */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  z-index: 1;
+  position: relative;
+}
+.links ul {
+  display: flex;
+  flex-direction: row;
+}
+.links ul li {
+  padding: 15px 15px 0 15px;
+}
+.toggle {
+  display: none;
+}
+.logo a {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+.links ul li a {
+  position: relative;
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+.links ul li .active::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--secondary-color);
+}
+.links ul li a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--secondary-color);
+}
+@media (max-width: 767px) {
+  .links ul {
+    display: none;
+  }
+  .toggle {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .toggle .close {
+    display: none;
+  }
+}
+/* End Heading */
+
+/* Start Overlaping */
+.overlap {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.overlap .over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0 0 0 /70%);
+}
+.overlap .word {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+}
+.overlap .word .h h1 {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 52px;
+}
+.overlap .word .h h3 {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 33px;
+}
+.overlap .social {
+  padding: 25px 0;
+}
+.overlap .social i {
+  color: var(--secondary-color);
+  padding: 0 10px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .overlap .word {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+  }
+}
+/* End Overlaping */
+
+/* Start About */
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  padding: var(--section-padding);
+}
+.about .hero img {
+  width: 250%;
+  padding: 0 160px;
+}
+.about .def {
+  margin-left: 300px;
+  margin-top: -150px;
+}
+.about .def h1 {
+  font-weight: 900;
+}
+.about .def span {
+  font-size: 14px;
+  color: #797979;
+}
+.about .def p {
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: bold;
+  color: #797979;
+}
+.about .def p span {
+  color: #4e4e4e;
+  font-size: 16px;
+}
+.about .bar {
+  position: absolute;
+  top: 60%;
+  right: -4.5%;
+  width: 50%;
+}
+.about .btn {
+  margin-top: 10px;
+  margin-left: -10px;
+  padding: 5px 20px;
+}
+.about .btn .cont {
+  margin-left: 1.5px;
+}
+@media (max-width: 767px) {
+  .about .hero {
+    position: absolute;
+    top: 15%;
+    left: 0%;
+  }
+  .about .hero img {
+    width: 750px;
+  }
+  .about .def {
+    margin-left: 100%;
+    margin-top: -150px;
+  }
+}
+/* End About */
+
+/* Start Services */
+.services {
+  margin-top: 100%;
+  padding: var(--section-padding);
+}
+.services .tit {
+  text-align: center;
+}
+.services .tit h1 {
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+.services .icon {
+  text-align: center;
+  font-size: 60px;
+}
+.services .capt {
+  text-align: center;
+  font-weight: bold;
+}
+.services .capt-small {
+  font-size: 14px;
+  text-align: center;
+  color: #797979;
+}
+/* End Services */
+
+/* Start Portfolio */
+.portfolio {
+  margin-top: 5%;
+  padding: var(--section-padding);
+}
+.portfolio .tit {
+  text-align: center;
+}
+.portfolio .tit h1 {
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+.portfolio .select {
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio .select ul {
+  display: flex;
+  flex-direction: row;
+}
+.portfolio .select ul li {
+  padding: 5px 25px;
+}
+.portfolio .select ul li a {
+  color: var(--main-color);
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.portfolio .select ul li .active::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--main-color);
+}
+.portfolio .select ul li a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--main-color);
+}
+.portfolio .imgs div img {
+  width: 90%;
+}
+/* End Portfolio */
+
+/* Start Test */
+.test {
+  margin-top: 5%;
+  padding: var(--section-padding);
+  position: relative;
+}
+.test .tit {
+  text-align: center;
+}
+.test .tit h1 {
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+.test .client {
+  position: absolute;
+  left: 45%;
+}
+.test .client img {
+  width: 15%;
+  border-radius: 50%;
+}
+.test .client p {
+  text-align: center;
+  margin-left: -40%;
+  margin-top: 5%;
+  width: 700px;
+  color: #797979;
+}
+.test .client h4 {
+  font-size: 18px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.test .client span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #797979;
+}
+.test .client .bullets {
+  padding-top: 15px;
+  cursor: pointer;
+}
+.test .client .bullets .b1 {
+  position: absolute;
+  left: 2.5%;
+  background-color: #a5a5a5;
+  width: 1.5%;
+  height: 4%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.test .client .bullets .b2 {
+  position: absolute;
+  left: 7%;
+  background-color: #a5a5a5;
+  width: 1.5%;
+  height: 4%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.test .client .bullets .b3 {
+  position: absolute;
+  left: 11.5%;
+  background-color: #a5a5a5;
+  width: 1.5%;
+  height: 4%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.test .client .bullets .b1:hover,
+.test .client .bullets .b2:hover,
+.test .client .bullets .b3:hover {
+  background-color: #4e4e4e;
+}
+/* End Test */
+
+/* Start Rate */
+.rate {
+  margin-top: 20%;
+  padding: var(--section-padding);
+  text-align: center;
+}
+.rate i {
+  font-size: 40px;
+}
+.rate h1 {
+  font-weight: bold;
+}
+.rate span {
+  color: #797979;
+  font-weight: bold;
+}
+/* End Rate */
+
+/* Start Blog */
+.blog {
+  margin-top: 5%;
+  padding: var(--section-padding);
+}
+.blog .tit {
+  text-align: center;
+}
+.blog .tit h1 {
+  font-weight: bold;
+}
+.blog .blo h5 {
+  color: #797979;
+  font-weight: bold;
+  font-size: 14px;
+}
+.blog .blo p {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+/* End Blog */
+
+/* Start Contact */
+.contact {
+  margin-top: 5%;
+  padding: var(--section-padding);
+}
+.contact .tit {
+  text-align: center;
+}
+.contact h1 {
+  font-weight: bold;
+}
+.contact .fil {
+  text-align: center;
+}
+.contact .fil i {
+  font-size: 30px;
+}
+.contact .fil h2 {
+  font-weight: bold;
+}
+.contact .fil span {
+  color: #797979;
+}
+/* End Contact */
